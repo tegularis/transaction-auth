@@ -1,0 +1,9 @@
+services:
+  bot:
+    restart: "always"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: "auth"
+    ports:
+      - 7909:8012
