@@ -106,7 +106,7 @@ class Transaction(Base):
     status = Column(String, default="completed")
     amount = Column(Float, nullable=False)
     receiver_id = Column(Integer, ForeignKey(Client.id), nullable=False)
-    sender_id = Column(Integer, ForeignKey(Client.id), nullable=True),
+    sender_id = Column(Integer, ForeignKey(Client.id), nullable=True)
     CheckConstraint(amount > 0, name="positive_check")
 
     def __init__(self, amount: float, receiver_id: int):

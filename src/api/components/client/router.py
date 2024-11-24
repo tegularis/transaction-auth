@@ -31,6 +31,6 @@ class ClientRouter:
             if not ("login" in data and "password" in data):
                 response.status_code = 400
                 return {'ok': False, 'message': 'bad request'}
-            status_code, data = self.controller.refresh(login=data["login"], password=data["password"])
+            status_code, data = self.controller.authenticate(login=data["login"], password=data["password"])
             response.status_code = status_code
             return data

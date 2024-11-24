@@ -38,7 +38,7 @@ class ClientController:
             {
                 "client": {
                     "id": client.id,
-                    "uuid": client.uuid,
+                    "uuid": str(client.uuid),
                     "login": client.login,
                     "password": client.password
                 },
